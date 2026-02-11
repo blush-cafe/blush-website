@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../dist/style.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/favicons/favicon.png">
+
+    <title>BLUSH Coffee & Sweets | Berlin-Frohnau</title>
+    <meta name="title" content="BLUSH Coffee & Sweets | Berlin-Frohnau">
+    <meta name="description"
+        content="Visit BLUSH in Berlin-Frohnau for premium handmade gelato, specialty coffee, homemade cakes, and fresh soups. Located at Zeltinger Pl. 11. Open daily.">
+    <meta name="keywords"
+        content="Blush Berlin, Cafe Frohnau, Gelato Berlin, Ice Cream Shop Frohnau, Soup, Cake, Coffee Shop Berlin 13465, Zeltinger Platz">
+    <meta name="author" content="Mahziar Jafarizadeh">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://blushberlin.de/">
+    <meta property="og:title" content="BLUSH Coffee & Sweets | Berlin-Frohnau">
+    <meta property="og:description"
+        content="Premium handmade gelato, coffee, cakes, and soups in the heart of Frohnau.">
+    <meta property="og:image" content="https://blushberlin.de/assets/images/og.jpg">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://blushberlin.de/">
+    <meta property="twitter:title" content="BLUSH Coffee & Sweets | Berlin-Frohnau">
+    <meta property="twitter:description"
+        content="Premium handmade gelato, coffee, cakes, and soups in the heart of Frohnau.">
+    <meta property="twitter:image" content="https://blushberlin.de/assets/images/og.jpg">
+
+    <style>
+        :root {
+            --gap-mobile: 3rem;
+            --gap-desktop: 10rem;
+
+            --blush-logo-top-mobile: 15rem;
+            --blush-logo-top-desktop: 15rem;
+
+            --current-gap: var(--gap-mobile);
+            --current-blush-top: var(--blush-logo-top-mobile);
+        }
+
+        @media (min-width: 768px) {
+            :root {
+                --current-gap: var(--gap-desktop);
+                --current-blush-top: var(--blush-logo-top-desktop);
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "BLUSH Coffee & Sweets | Berlin-Frohnau",
+      "image": "https://blushberlin.de/assets/images/og.jpg",
+      "@id": "https://blushberlin.de",
+      "url": "https://blushberlin.de",
+      "telephone": "+493060598683",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeltinger Pl. 11",
+        "addressLocality": "Berlin",
+        "postalCode": "13465",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 52.634193, 
+        "longitude": 13.289472
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"
+        ],
+        "opens": "11:00",
+        "closes": "19:00"
+      },
+      "servesCuisine": ["Coffee", "Cake", "Gelato", "Soup"],
+      "priceRange": "€€"
+    }
+    </script>
+</head>
+
+<body class="bg-ice-cream-bg min-h-screen font-karla overflow-x-hidden perspective-1000">
+
+    <div class="absolute top-0 left-0 w-full flex justify-center z-50 animate-fade-blur pointer-events-none"
+        style="padding-top: var(--current-blush-top);"> <img src="../assets/images/blush_logo.svg" alt="Blush Logo"
+            class="w-60 md:w-64">
+    </div>
+
+    <div id="ice-cream-container"
+        class="fixed top-1/2 left-1/2 z-50 pointer-events-none animate-fade-blur origin-center will-change-transform"
+        style="transform: translate(-50%, -50%);">
+        <img src="../assets/images/blush_ice_cream.svg" alt="Blush Ice Cream" class="w-full h-auto max-w-none">
+    </div>
+
+    <div class="h-screen w-full"></div>
+
+    <div id="image-section"
+        class="relative z-40 w-full min-h-screen flex flex-row justify-center items-center px-2 md:px-20 py-20 overflow-hidden bg-ice-cream-bg"
+        style="gap: var(--current-gap);">
+    
+        <div class="w-[45%] md:w-auto flex justify-end door-left transition-all duration-1000 ease-out">
+            <img src="../assets/images/01.webp" alt="Interior 1"
+                class="w-full md:max-w-md shadow-2xl object-contain h-auto select-none" draggable="false"
+                oncontextmenu="return false">
+        </div>
+    
+        <div class="w-[45%] md:w-auto flex justify-start door-right transition-all duration-1000 ease-out">
+            <img src="../assets/images/02.webp" alt="Interior 2"
+                class="w-full md:max-w-md shadow-2xl object-contain h-auto select-none" draggable="false"
+                oncontextmenu="return false">
+        </div>
+    
+    </div>
+    
+    <div class="relative z-40 text-center text-blush-red pb-20 bg-ice-cream-bg pt-10 w-full">
+        <p class="text-lg md:text-xl font-bold uppercase tracking-widest mb-2">Opening Hours</p>
+        <p class="text-base md:text-lg mb-2">Daily 11:00 - 19:00</p>
+        <p class="text-base md:text-lg mb-6 font-bold">030 60598683</p>
+        <address class="not-italic text-base md:text-lg leading-relaxed">
+            Zeltinger Pl. 11<br>
+            13465 Berlin<br>
+            Germany
+        </address>
+    </div>
+
+    <footer
+        class="relative z-40 w-full bg-ice-cream-bg pb-10 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-6 text-sm md:text-base font-bold">
+    
+        <a href="https://mahziarjafarizadeh.com/" target="_blank"
+            class="order-3 md:order-1 text-blush-red hover:text-[#111] transition-colors duration-300">
+            Website by MJ
+        </a>
+    
+        <div class="order-2 md:order-2 text-[#111]">
+            &copy; 2024–2026
+            <a href="https://blushberlin.de" target="_blank"
+                class="text-blush-red hover:text-[#111] transition-colors duration-300">
+                BLUSH
+            </a>. All rights reserved.
+        </div>
+    
+        <a href="https://www.instagram.com/blush_berlin/" target="_blank"
+            class="order-1 md:order-3 flex items-center gap-2 text-blush-red hover:text-[#111] transition-colors duration-300 group">
+    
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" class="w-5 h-5 fill-current">
+                <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+            <span>blush_berlin</span>
+        </a>
+    
+    </footer>
+
+    <script>
+        // Separate configs for Mobile and Desktop
+            const CONFIG = {
+                    desktop: {
+                        logoStartWidth: 550,
+                        logoEndWidth: 300,
+                        logoDropDistanceVh: -10,
+                        imageRotation: 25,
+                        logoTopPosition: 60      // Distance from top in % (50% is center)
+                    },
+                    mobile: {
+                        logoStartWidth: 350,      // Made bigger for mobile
+                        logoEndWidth: 250,
+                        logoDropDistanceVh: -35,
+                        imageRotation: 25,
+                        logoTopPosition: 65       // Slightly higher up in mobile
+                    }
+                };
+
+        const logoContainer = document.getElementById('ice-cream-container');
+        const logoImg = logoContainer.querySelector('img');
+        const doorLeft = document.querySelector('.door-left');
+        const doorRight = document.querySelector('.door-right');
+
+        // Logic to handle separate mobile/desktop configs
+            const getActiveConfig = () => window.innerWidth < 768 ? CONFIG.mobile : CONFIG.desktop;
+
+            // Helper function to apply initial styles
+            const applyInitialStyles = () => {
+                const settings = getActiveConfig();
+                logoImg.style.width = `${settings.logoStartWidth}px`;
+                // Apply dynamic top position
+                logoContainer.style.top = `${settings.logoTopPosition}%`;
+            };
+
+            // Initial Call
+            applyInitialStyles();
+
+            // Scroll Handler
+            window.addEventListener('scroll', () => {
+                const settings = getActiveConfig();
+
+                const scrollY = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const documentHeight = document.body.scrollHeight;
+
+                // Calculate total scrollable distance
+                const maxScroll = documentHeight - windowHeight;
+
+                // 1. Ice Cream Logo Logic
+                const progress = Math.min(1, scrollY / (maxScroll * 0.9));
+
+                // Calculate new width using 'settings' instead of global CONFIG
+                const currentWidth = settings.logoStartWidth - (progress * (settings.logoStartWidth - settings.logoEndWidth));
+
+                // Calculate vertical movement
+                const maxDropPx = (windowHeight * settings.logoDropDistanceVh) / 100;
+                const currentTranslateY = progress * maxDropPx;
+
+                // Apply transformations
+                logoContainer.style.transform = `translate(-50%, calc(-50% + ${currentTranslateY}px))`;
+                logoImg.style.width = `${currentWidth}px`;
+
+
+                // 2. 3D Image Entrance
+                if (scrollY > windowHeight * 0.15) {
+                    // Use settings.imageRotation instead of 0deg
+                    // Left image rotates positive, Right image rotates negative (inwards)
+                    doorLeft.style.transform = `perspective(1000px) translateX(0) rotateY(${settings.imageRotation}deg)`;
+                    doorLeft.style.opacity = '1';
+
+                    doorRight.style.transform = `perspective(1000px) translateX(0) rotateY(-${settings.imageRotation}deg)`;
+                    doorRight.style.opacity = '1';
+                } else {
+                    // Exit state remains the same
+                    doorLeft.style.transform = 'perspective(1000px) translateX(-50px) rotateY(-45deg)';
+                    doorLeft.style.opacity = '0';
+
+                    doorRight.style.transform = 'perspective(1000px) translateX(50px) rotateY(45deg)';
+                    doorRight.style.opacity = '0';
+                }
+            });
+
+            // Update initial logo size on window resize
+            window.addEventListener('resize', () => {
+                    applyInitialStyles();
+                });
+
+        // Trigger initial paint
+        window.dispatchEvent(new Event('scroll'));
+        
+    </script>
+
+</body>
+
+</html>
