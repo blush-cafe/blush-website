@@ -11,9 +11,9 @@
     <title>BLUSH Coffee & Sweets | Berlin-Frohnau</title>
     <meta name="title" content="BLUSH Coffee & Sweets | Berlin-Frohnau">
     <meta name="description"
-        content="Visit BLUSH in Berlin-Frohnau for Premium handmade gelato, coffee, smoothies, waffles, cakes, tarts, and soups. Located at Zeltinger Pl. 11. Open daily.">
+        content="Visit BLUSH in Berlin-Frohnau for Premium organic ice cream, coffee, smoothies, waffles, cakes, tarts, and soups. Located at Zeltinger Pl. 11. Open daily.">
     <meta name="keywords"
-        content="Blush Berlin, Cafe Frohnau, Gelato Berlin, Ice Cream Shop Frohnau, Soup, Cake, Coffee Shop Berlin 13465, Zeltinger Platz">
+        content="Blush Berlin, Cafe Frohnau, Organic Ice Cream Shop Frohnau, Soup, Cake, Coffee Shop Berlin 13465, Zeltinger Platz">
     <meta name="author" content="Mahziar Jafarizadeh">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -22,14 +22,14 @@
     <meta property="og:url" content="https://blushberlin.de/">
     <meta property="og:title" content="BLUSH Coffee & Sweets | Berlin-Frohnau">
     <meta property="og:description"
-        content="Premium handmade gelato, coffee, smoothies, waffles, cakes, tarts, and soups in the heart of Frohnau. Crafted daily with love and fresh ingredients.">
+        content="Premium organic ice cream, coffee, smoothies, waffles, cakes, tarts, and soups in the heart of Frohnau. Crafted daily with love and fresh ingredients.">
     <meta property="og:image" content="https://blushberlin.de/assets/images/og.jpg">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://blushberlin.de/">
     <meta property="twitter:title" content="BLUSH Coffee & Sweets | Berlin-Frohnau">
     <meta property="twitter:description"
-        content="Premium handmade gelato, coffee, smoothies, waffles, cakes, tarts, and soups in the heart of Frohnau.">
+        content="Premium organic ice cream, coffee, smoothies, waffles, cakes, tarts, and soups in the heart of Frohnau.">
     <meta property="twitter:image" content="https://blushberlin.de/assets/images/og.jpg">
 
     <style>
@@ -49,6 +49,61 @@
                 --current-gap: var(--gap-desktop);
                 --current-blush-top: var(--blush-logo-top-desktop);
             }
+        }
+
+        /* Blush Effect Classes */
+        body.is-blushing {
+            background-color: #c10830 !important;
+            transition: background-color 2.5s ease;
+        }
+
+        body.is-blushing * {
+            color: #f8c4af !important;
+            /* Makes text light when bg is red */
+            transition: color 2.5s ease;
+        }
+
+        /* Shy Shake Animation */
+        @keyframes shy-shake {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(-1px, 1px) rotate(-0.5deg);
+            }
+
+            20% {
+                transform: translate(1px, -1px) rotate(0.5deg);
+            }
+
+            30% {
+                transform: translate(-2px, 0px) rotate(-1deg);
+            }
+
+            40% {
+                transform: translate(2px, 0px) rotate(1deg);
+            }
+
+            50% {
+                transform: translate(-1px, 1px) rotate(-0.5deg);
+            }
+
+            60% {
+                transform: translate(1px, -1px) rotate(0.5deg);
+            }
+
+            70% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+        }
+
+        .shake-element {
+            animation: shy-shake 2.5s ease-in-out;
         }
     </style>
 
@@ -81,7 +136,7 @@
         "opens": "11:00",
         "closes": "19:00"
       },
-      "servesCuisine": ["Coffee", "Cake", "Gelato", "Soup"],
+      "servesCuisine": ["Organic Ice Cream", "Coffee", "Smoothies", "Waffles", "Cakes", "Tarts", "Soups"],
       "priceRange": "€€"
     }
     </script>
@@ -89,21 +144,46 @@
 
 <body class="bg-ice-cream-bg min-h-screen font-karla overflow-x-hidden perspective-1000">
 
-    <div class="absolute top-0 left-0 w-full flex justify-center z-50 animate-fade-blur pointer-events-none"
-        style="padding-top: var(--current-blush-top);"> <img src="../assets/images/blush_logo.svg" alt="Blush Logo"
-            class="w-60 md:w-64">
-    </div>
+    <nav
+        class="absolute top-0 left-0 w-full z-[60] py-6 flex justify-center items-center gap-8 md:gap-12 pointer-events-auto">
+        <a href="#"
+            class="group relative text-blush-red font-bold uppercase tracking-widest text-sm md:text-base transition-transform duration-300 hover:scale-110">
+            Menu
+            <span
+                class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-2 border-b-[3px] border-blush-red rounded-[100%] transition-all duration-500 group-hover:w-full"></span>
+        </a>
 
-    <div id="ice-cream-container"
-        class="fixed top-1/2 left-1/2 z-50 pointer-events-none animate-fade-blur origin-center will-change-transform"
+        <a href="#"
+            class="group relative text-blush-red font-bold uppercase tracking-widest text-sm md:text-base transition-transform duration-300 hover:scale-110">
+            Reservation
+            <span
+                class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-2 border-b-[3px] border-blush-red rounded-[100%] transition-all duration-500 group-hover:w-full"></span>
+        </a>
+
+        <a href="#"
+            class="group relative text-blush-red font-bold uppercase tracking-widest text-sm md:text-base transition-transform duration-300 hover:scale-110">
+            Catering
+            <span
+                class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-2 border-b-[3px] border-blush-red rounded-[100%] transition-all duration-500 group-hover:w-full"></span>
+            </a>
+            </nav>
+            
+            <div id="blush-logo-container"
+                class="absolute top-0 left-0 w-full flex justify-center z-50 animate-fade-blur pointer-events-none"
+                style="padding-top: var(--current-blush-top);"> <img src="../assets/images/blush_logo.svg" alt="Blush Logo"
+                    class="w-60 md:w-64">
+            </div>
+            
+            <div id="ice-cream-container"
+                class="fixed top-1/2 left-1/2 z-50 pointer-events-none animate-fade-blur origin-center will-change-transform"
         style="transform: translate(-50%, -50%);">
         <img src="../assets/images/blush_ice_cream.svg" alt="Blush Ice Cream" class="w-full h-auto max-w-none">
     </div>
-    
+
     <div class="h-screen w-full"></div>
-    
+
     <div class="relative z-40 bg-ice-cream-bg min-h-screen flex flex-col justify-between items-center w-full">
-    
+
         <div class="flex-grow flex flex-col justify-center items-center text-center text-blush-red pt-20 px-4">
             <p class="text-lg md:text-xl font-bold uppercase tracking-widest mb-2">Opening Hours</p>
             <p class="text-base md:text-lg mb-2">Daily 11:00 - 19:00</p>
@@ -114,57 +194,92 @@
                 Germany
             </address>
         </div>
-    
-        <footer
-            class="w-full pb-10 pt-10 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-6 text-sm md:text-base font-bold">
-    
-            <div class="w-full md:flex-1 order-3 md:order-1 text-center md:text-left">
+
+        <footer class="w-full pb-10 pt-10 px-6 md:px-20 flex flex-col items-center relative z-40">
+        
+            <div class="w-full flex flex-col md:grid md:grid-cols-3 items-center gap-6 md:gap-0">
+        
                 <a href="https://mahziarjafarizadeh.com/" target="_blank"
-                    class="text-blush-red hover:text-[#111] transition-colors duration-300">
+                    class="order-3 md:order-1 text-blush-red hover:text-[#111] transition-colors duration-300 whitespace-nowrap text-sm md:text-base font-bold md:justify-self-start">
                     Website by MJ
                 </a>
+        
+                <div
+                    class="order-2 md:order-2 text-[#111] whitespace-nowrap text-center text-sm md:text-base font-bold md:justify-self-center">
+                    &copy; 2024 – 2026
+                    <span onclick="triggerBlushEffect()"
+                        class="cursor-pointer text-blush-red hover:text-[#111] transition-colors duration-300">
+                        BLUSH
+                    </span>. All rights reserved.
+                </div>
+        
+                <div class="order-1 md:order-3 flex items-center gap-6 md:justify-self-end">
+                    <a href="https://www.instagram.com/blush_berlin/" target="_blank"
+                        class="flex items-center gap-2 text-blush-red hover:text-[#111] transition-colors duration-300 group font-bold text-sm md:text-base">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            class="w-5 h-5 fill-current">
+                            <path d="M16.3,4.7c-.7,0-1.2.5-1.2,1.2s.5,1.2,1.2,1.2,1.2-.5,1.2-1.2-.5-1.2-1.2-1.2Z" />
+                            <path
+                                d="M11,6.2c-2.8,0-4.9,2.3-4.9,4.9s2.3,4.9,4.9,4.9,4.9-2.3,4.9-4.9-2.2-4.9-4.9-4.9ZM11,14.3c-1.8,0-3.2-1.4-3.2-3.2s1.4-3.2,3.2-3.2,3.2,1.4,3.2,3.2-1.4,3.2-3.2,3.2Z" />
+                            <path
+                                d="M15.1,1h-7.9C3.7,1,1,3.7,1,7v7.9c0,3.3,2.7,6,6,6h7.9c3.3,0,6-2.7,6-6v-7.9c0-3.3-2.6-6-5.9-6ZM19.2,15.1c0,2.3-1.8,4.2-4.2,4.2h-7.9c-2.3,0-4.2-1.8-4.2-4.2v-7.9c0-2.3,1.8-4.2,4.2-4.2h7.9c2.3,0,4.2,1.8,4.2,4.2v7.9Z" />
+                        </svg>
+                        <span>blush_berlin</span>
+                    </a>
+        
+                    <a href="https://www.tiktok.com/@blush_berlin" target="_blank"
+                        class="flex items-center gap-2 text-blush-red hover:text-[#111] transition-colors duration-300 group font-bold text-sm md:text-base">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                            class="w-5 h-5 fill-current">
+                            <path
+                                d="M8.5,10.9c-1.8-.6-3.7.8-3.7,2.7.2,4,5.6,3.4,5.7,0V.1h3.4c0,2.5,2.2,4.8,4.7,4.7v3.4c-1.7,0-3.3-.5-4.7-1.5v6.9c0,5-5.8,8-9.8,5.1C-1.2,15,2,6.6,8.5,7.4v3.5h0Z" />
+                        </svg>
+                        <span>blush_berlin</span>
+                    </a>
+                </div>
             </div>
-    
-            <div class="order-2 md:order-2 text-[#111] text-center w-full md:flex-1">
-                &copy; 2024 – 2026
-                <a href="https://blushberlin.de" target="_blank"
-                    class="text-blush-red hover:text-[#111] transition-colors duration-300">
-                    BLUSH
-                </a>. All rights reserved.
-            </div>
-    
-            <div
-                class="w-full md:flex-1 order-1 md:order-3 flex flex-col md:flex-row items-center justify-center md:justify-end gap-4">
-    
-                <a href="https://www.instagram.com/blush_berlin/" target="_blank"
-                    class="flex items-center gap-2 text-blush-red hover:text-[#111] transition-colors duration-300 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                        class="w-5 h-5 fill-current">
-                        <path d="M16.3,4.7c-.7,0-1.2.5-1.2,1.2s.5,1.2,1.2,1.2,1.2-.5,1.2-1.2-.5-1.2-1.2-1.2Z" />
-                        <path
-                            d="M11,6.2c-2.8,0-4.9,2.3-4.9,4.9s2.3,4.9,4.9,4.9,4.9-2.3,4.9-4.9-2.2-4.9-4.9-4.9ZM11,14.3c-1.8,0-3.2-1.4-3.2-3.2s1.4-3.2,3.2-3.2,3.2,1.4,3.2,3.2-1.4,3.2-3.2,3.2Z" />
-                        <path
-                            d="M15.1,1h-7.9C3.7,1,1,3.7,1,7v7.9c0,3.3,2.7,6,6,6h7.9c3.3,0,6-2.7,6-6v-7.9c0-3.3-2.6-6-5.9-6ZM19.2,15.1c0,2.3-1.8,4.2-4.2,4.2h-7.9c-2.3,0-4.2-1.8-4.2-4.2v-7.9c0-2.3,1.8-4.2,4.2-4.2h7.9c2.3,0,4.2,1.8,4.2,4.2v7.9Z" />
-                    </svg>
-                    <span>blush_berlin</span>
-                </a>
-    
-                <a href="https://www.tiktok.com/@blush_berlin" target="_blank"
-                    class="flex items-center gap-2 text-blush-red hover:text-[#111] transition-colors duration-300 group">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                        class="w-5 h-5 fill-current">
-                        <path
-                            d="M8.5,10.9c-1.8-.6-3.7.8-3.7,2.7.2,4,5.6,3.4,5.7,0V.1h3.4c0,2.5,2.2,4.8,4.7,4.7v3.4c-1.7,0-3.3-.5-4.7-1.5v6.9c0,5-5.8,8-9.8,5.1C-1.2,15,2,6.6,8.5,7.4v3.5h0Z" />
-                    </svg>
-                    <span>blush_berlin</span>
-                </a>
-    
-            </div>
-    
+        
+            <a href="#"
+                class="mt-4 text-blush-red hover:text-[#111] uppercase tracking-wider text-xs md:text-sm transition-colors duration-300 font-bold">
+                Impressum
+            </a>
+        
         </footer>
+        
+        <div onclick="triggerBlushEffect()"
+            class="fixed bottom-5 right-5 md:bottom-[150px] md:right-[70px] z-[70] cursor-pointer group transition-transform duration-300 hover:scale-110 flex flex-col items-center">
+        
+            <span
+                class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-blush-red font-karla font-bold mb-1 whitespace-nowrap pointer-events-none">
+                Go Up
+            </span>
+        
+            <img src="../assets/icons/you_make_me_blush.svg" alt="Go Up" class="w-12 h-12 md:w-16 md:h-16 drop-shadow-lg">
+        </div>
+
     </div>
 
     <script>
+        // --- BLUSH EFFECT FUNCTIONALITY ---
+        function triggerBlushEffect() {
+            // 1. Smooth Scroll to Top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            // 2. Add Blush Color Class to Body
+            document.body.classList.add('is-blushing');
+
+            // 3. Shake Elements
+            const elementsToShake = document.querySelectorAll('body > nav, body > div:not(#ice-cream-container):not(#blush-logo-container)');
+            elementsToShake.forEach(el => el.classList.add('shake-element'));
+
+            // 4. Remove Effects after animation (approx 2.5s)
+            setTimeout(() => {
+                document.body.classList.remove('is-blushing');
+                elementsToShake.forEach(el => el.classList.remove('shake-element'));
+            }, 2500);
+        }
+
+        // --- SCROLL & LOGO LOGIC ---
         // Separate configs for Mobile and Desktop
         const CONFIG = {
             desktop: {
